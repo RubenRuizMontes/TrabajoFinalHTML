@@ -1,0 +1,8 @@
+<div class="wrapper">
+    <div class="texto"><h1 style="color: white;">Escoja sobre que hecho histórico decea saber</h1></div>
+  </div>
+  <app-busqueda-criteria style="margin-bottom: 5rem !important;" (criteriaSelected)="onCriteriaSelectedFromChild($event)"></app-busqueda-criteria>
+  <app-busqueda-result [criteriaListenedFromExternalComponent]="criteriaSelected" [loading]="loading"></app-busqueda-result>
+  
+  
+  

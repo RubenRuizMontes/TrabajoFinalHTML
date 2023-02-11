@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-title style="margin-top: 2rem; margin-bottom: 2rem; color: #fff;">Iniciar Sesi&oacute;n</mat-card-title>
+    <mat-card-content>
+      <form (submit)="submit(postForm)" #postForm="ngForm">
+      <p>
+        <mat-form-field>
+          <input type="text" matInput ngModel placeholder="Rubenzin@example.com" name="email" required #email="ngModel">
+          <mat-error *ngIf="email.invalid">Introduzca su correo</mat-error>
+        </mat-form-field>
+      </p>
+  
+      <p>
+        <mat-form-field>
+          <input type="password" matInput ngModel placeholder="Contraseña" name="pwd" required #pwd="ngModel">
+          <mat-error *ngIf="pwd.invalid">Introduzca su password</mat-error>
+        </mat-form-field>
+      </p>
+  
+  
+  
+      <div class="button">
+        <button type="submit" mat-button style="background-color: rgba(217, 223, 232, 0.656);" color="primary">Iniciar Sesi&oacute;n</button>
+      </div>
+  
+      </form>
+    </mat-card-content>
+  </mat-card>
+  

@@ -1,0 +1,35 @@
+<div *ngIf="criteriaListenedFromExternalComponent.criteria==''" class="wrapper">
+    <div class="titulo">
+     
+      <h1 style="color: white;">Usted aún no ha escogido un hecho histórico a saber</h1>
+
+    </div>
+  </div>
+  <div class="wrapper" *ngIf="loading">
+    <div  class="lds-dual-ring"></div>
+  </div>
+  <div *ngIf="criteriaListenedFromExternalComponent.criteria!='' && !loading"  >
+    <div class="wrapper">
+      <div class="titulo">
+        <h1 style="color: white;">{{criteriaListenedFromExternalComponent.criteria}}</h1>
+      </div>
+    </div>
+    <hr>
+    <mat-grid-list cols="2"
+    rowHeight="25rem" gutterSize="3rem">
+    <div *ngFor="let hecho of criteriaListenedFromExternalComponent.hechos">
+     
+      <mat-grid-tile>
+        <div class="texto">
+          <h1 style="color: white;text-align: center;">Año:  {{hecho.year}} </h1>
+          <h1 style="color: white;text-align: center;">Mes:  {{hecho.month}} </h1>
+        <hr>
+        <h2>{{hecho.event}}</h2>
+        </div>
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>
+  </div>
+  
+  
+  
